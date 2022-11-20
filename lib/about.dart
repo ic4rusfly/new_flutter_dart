@@ -1,9 +1,7 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
-class SecondPage extends StatelessWidget {
-  const SecondPage({Key? key, required this.title}) : super(key: key);
+class HighQuality extends StatelessWidget {
+  const HighQuality({Key? key, required this.title}) : super(key: key);
   final String title;
   @override
   Widget build(BuildContext context) {
@@ -14,9 +12,10 @@ class SecondPage extends StatelessWidget {
       body: Center(
         child: TextButton(
           onPressed: () {
-            Navigator.pop(context, "Returned from secondPage");
+            Navigator.pop(context, "Returned from HighQuality");
           },
-          child: const Text('Exit'),
+          child: Image.network(
+              'https://media.discordapp.net/attachments/494479193871220748/1043681360952446996/IMG_20221120_011626_190.png'),
         ),
       ),
     );

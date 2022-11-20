@@ -1,7 +1,4 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
-
 import 'about.dart';
 
 void main() {
@@ -13,17 +10,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'faysal test app',
+      title: 'Look At Me',
       theme: ThemeData(
-        primarySwatch: Colors.brown,
+        primarySwatch: Colors.deepPurple,
       ),
-      home: const FirstPage(title: 'FirstPage'),
+      home: const Blured(title: 'Blured'),
     );
   }
 }
 
-class FirstPage extends StatelessWidget {
-  const FirstPage({Key? key, required this.title}) : super(key: key);
+class Blured extends StatelessWidget {
+  const Blured({Key? key, required this.title}) : super(key: key);
   final String title;
   @override
   Widget build(BuildContext context) {
@@ -35,10 +32,11 @@ class FirstPage extends StatelessWidget {
         child: TextButton(
           onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return const SecondPage(title: 'SecondPage');
+              return const HighQuality(title: 'HighQuality');
             }));
           },
-          child: const Text('Faysal'),
+          child: Image.network(
+              'https://media.discordapp.net/attachments/494479193871220748/974248255712022558/yelaz_pic_glass_1.png'),
         ),
       ),
     );
